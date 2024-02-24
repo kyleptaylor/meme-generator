@@ -14,14 +14,16 @@
     <h1>Meme Generator</h1>
     <p>Punch in the form info below for some dank memes!</p>
     <form action="">
-        <input id="url" type="text" placeholder="Image Link" required><br>
-        <input id="top-text" type="text" placeholder="Top Meme Text" required><br>
-        <input id="bottom-text" type="text" placeholder="Bottom Meme Text (Optional)"><br>
-        <button id="create-meme">Create</button>
+        <div class="flex-wrapper">
+            <input id="url" type="text" placeholder="Image Link" required>
+            <input id="top-text" type="text" placeholder="Top Meme Text" required>
+            <input id="bottom-text" type="text" placeholder="Bottom Meme Text (Optional)">
+            <button id="create-meme">Create</button>
+        </div>
     </form>
     </div>
     <div class="bottom">
-        <h2>Meme Feild</h2>
+        <h2>Memes</h2>
         <div class="memes"></div>
     </div>
     <script src="script.js"></script>

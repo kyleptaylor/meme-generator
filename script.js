@@ -35,6 +35,11 @@ function create(event) {
     bottomText.innerText = bottomTextValue;
     bottomText.classList.add('meme-text');
 
+    // Reset Values
+    document.getElementById("url").value = "";
+    document.getElementById("top-text").value = "";
+    document.getElementById("bottom-text").value = "";
+
     // Delete Div //
     const deleteDiv = document.createElement("div");
     deleteDiv.classList.add('delete');
@@ -43,8 +48,4 @@ function create(event) {
     deleteDiv.addEventListener('click', function () {
     newDiv.remove();
     });
-
-    console.log(url)
-    console.log(topText)
-    console.log(bottomText)
 }

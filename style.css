@@ -1,47 +1,92 @@
+*{
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
 body{
     background-color: #f4f4f4;
     margin: 0px;
     padding: 0px;
+    height: 100vh;
     box-sizing: border-box;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #010402;
 }
 
 .top{
-    background-color: darkgray;
     margin: 0px;
     padding: 20px 50px 10px 50px;
 }
 
-.top h1{
+h1{
     margin-bottom: 0px;
+    color: #4bc3b5;
+}
+
+h2{
+    margin-bottom: 0px;
+    color: #4bc3b5;
 }
 
 .top p{
     margin: 5px 0 25px 0;
+    color: #4bc3b5;
 }
 
 form {
     text-align: center;
     padding-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 form input{
-    padding: 10px;
-    margin: 10px;
-    width: 90%;
+    padding: 15px;
+    margin: 5px;
+    width: 100%;
+    max-width: 250px;
+    background-color: #010402;
+    border: 1px solid #4bc3b5;
+    color: #4bc3b5;
+}
+
+form input:focus{
+    outline: none;
+}
+
+::placeholder {
+    color: #4bc3b590;
+}
+
+.flex-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #create-meme {
-    width: 40%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
     padding: 10px;
-    margin: 10px;
+    margin: 20px 5px;
     cursor: pointer;
+    border: 1px solid #4bc3b5;
+    color: #eeeeee;
+    background-color: #4bc3b5;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+#create-meme:hover {
+    border: 1px solid #4bc3b5;
+    color: #4bc3b5;
+    background-color: #eeeeee;
 }
 
 .bottom {
     padding: 20px;
-    margin: 0;
+    margin: 0px 20px 100px;
 }
 
 div.memes {
@@ -55,14 +100,14 @@ div.memes {
 
 div.meme{
     margin: 20px;
-    height: 400px;
-    width: 400px;
-    background-color: lightgrey;
+    height: 300px;
+    width: 300px;
+    background-color: #eeeeee;
+    border-radius: 5px;
     position: relative;
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-    transition: opacity 0.3s ease;
 }
 
 .top-text-div{
@@ -85,7 +130,7 @@ div.meme{
     color: white;
     letter-spacing: 2px;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 10px;
     font-family: 'Anton', Arial, sans-serif;
 }
@@ -96,17 +141,16 @@ div.meme:hover .delete{
 
 .delete{
     cursor: pointer;
-    padding: 0px 40px;
-    border: 15px solid rgb(255, 0, 0, .6);
+    padding: 2px 8px;
+    border: 3px solid rgb(255, 0, 0, .7);
+    border-radius: 5px;
     color: rgb(255, 0, 0, .6);
-    transition: all 0.5s ease;
     opacity: 0;
     margin: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 10em;
+    top: -5%;
+    right: -5%;
+    font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
